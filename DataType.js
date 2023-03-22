@@ -89,7 +89,13 @@ function showBook({ name, part, year, author, country, genre }) {
   console.log(message);
 }
 
-//function 3 (battery API)
+// function 3 forEach
+books.forEach(myFunction);
+function myFunction(value) {
+  console.log(value);
+}
+
+//function 4 (battery API)
 navigator
   .getBattery()
   .then(function (battery) {
@@ -102,6 +108,49 @@ navigator
     console.log("Not found", error);
   });
 
-//function 4
+//function 5 (loops)
+const user = {
+  name: "Elsa",
+  eftername: "Broun",
+  age: 35,
+};
 
+//show value
+for (let a in user) {
+  console.log(user[a]);
+}
 
+Object.defineProperty(user, "age", { enumerable: false });
+for (let a in user) {
+  console.log(user[a]);
+}
+
+//change value
+const user2 = {
+  name: "Lora",
+  eftername: "Green",
+  age: 35,
+};
+
+Object.defineProperty(user2, "age", { value: 25 });
+for (let b in user2) {
+  console.log(user2[b]);
+}
+
+//add value
+const user3 = {
+  name: "Kate",
+  eftername: "Red",
+  age: 35,
+};
+//user3.job = "teacher";
+
+Object.defineProperty(user3, "job", {
+  value: "teacher",
+  writable: true,
+  enumerable: true,
+  configurable: true,
+});
+for (let c in user3) {
+  console.log(user3[c]);
+}
