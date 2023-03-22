@@ -1,6 +1,6 @@
 //varialbe 1
-//const greetings = prompt("Hello! What is your name?");
-//const ansver = alert(`Nice to see you ${greetings} on this page!`);
+const greetings = prompt("Hello! What is your name?");
+const ansver = alert(`Nice to see you ${greetings} on this page!`);
 //console.log(ansver);
 
 //varialbe 2
